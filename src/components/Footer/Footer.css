@@ -1,0 +1,36 @@
+.footer p {
+    color: rgb(170, 170, 170);
+}
+.quick-link a {
+    display: block;
+    color: rgb(170, 170, 170);
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+.quick-link a:hover {
+    color: rgb(223, 223, 223);
+    text-decoration: underline;
+}
+.main-color {
+    color: rgb(255, 115, 0);
+}
+.follow-us p {
+    display: inline-block;
+}
+.follow-us a {
+    display: inline-block;
+    color: rgb(170, 170, 170);
+    text-decoration: none;
+    margin: 0 35px 15px 0;
+}
+.follow-us a:hover {
+    color: rgb(255, 255, 255);
+}
+.follow-us a i {
+    font-size: 28px;
+    transition: .3s;
+    display: block;
+}
+.follow-us a i:hover{
+    transform: scale(1.3);
+}

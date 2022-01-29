@@ -2,6 +2,8 @@ import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import ContactPage from './pages/ContactPage/ContactPage';
 
 function App() {
   return (
@@ -14,7 +16,11 @@ function App() {
         <Route path="/home">
           <HomePage></HomePage>
         </Route>
+        <Route path="/contact">
+          <ContactPage></ContactPage>
+        </Route>
       </Switch>
+      <Footer></Footer>
     </BrowserRouter>
   );
 }

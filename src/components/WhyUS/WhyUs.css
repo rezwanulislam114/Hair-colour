@@ -17,15 +17,15 @@
     display: block;
 }
 .btn-regular {
-    border: 2px solid black;
+    border: none;
     outline: none;
     border-radius: 5px;
     padding: 7px 20px;
-    background: rgb(223, 223, 223);
+    background: rgba(253, 163, 90, 0.822);
     color: black;
     transition: .5s;
 }
 .btn-regular:hover {
-    background: rgb(0, 0, 0);
+    background: rgb(255, 115, 0);
     color: white;
 }

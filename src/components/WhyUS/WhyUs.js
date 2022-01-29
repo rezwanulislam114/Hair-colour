@@ -10,11 +10,11 @@ const WhyUs = () => {
                 <div className="row align-items-center">
                     <div className="col-sm-6 col-12">
                         <h1 className='title-text'>Why Choose Us?</h1>
-                        <p className='ps-4 mt-5 fs-4'><i className="fas fa-caret-right me-2"></i>Super Fast Production Schedules</p>
-                        <p className='ps-4 mt-3 fs-4'><i className="fas fa-caret-right me-2"></i>Excellent After Sales Service</p>
-                        <p className='ps-4 mt-3 fs-4'><i className="fas fa-caret-right me-2"></i>High Quality and Affordable</p>
-                        <p className='ps-4 mt-3 fs-4'><i className="fas fa-caret-right me-2"></i>Customer Value and Satisfaction</p>
-                        <p className='ps-4 mt-3 fs-4'><i className="fas fa-caret-right me-2"></i>Prompt Response</p>
+                        <p className='ps-4 mt-5'><i className="fas fa-caret-right me-2"></i>Super Fast Production Schedules</p>
+                        <p className='ps-4 mt-2'><i className="fas fa-caret-right me-2"></i>Excellent After Sales Service</p>
+                        <p className='ps-4 mt-2'><i className="fas fa-caret-right me-2"></i>High Quality and Affordable</p>
+                        <p className='ps-4 mt-2'><i className="fas fa-caret-right me-2"></i>Customer Value and Satisfaction</p>
+                        <p className='ps-4 mt-2'><i className="fas fa-caret-right me-2"></i>Prompt Response</p>
                         <button className='btn-regular mt-4'>Learn More About Us <i class="ms-2 fas fa-paper-plane"></i></button>
                     </div>
                     <div className="col-sm-6 col-12">

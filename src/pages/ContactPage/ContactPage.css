@@ -4,3 +4,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.person-img {
+    width: 230px;
+    margin-top: 20px;
+}

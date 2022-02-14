@@ -8,3 +8,15 @@
     width: 230px;
     margin-top: 20px;
 }
+.send-email input, .send-email textarea {
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 3px solid rgb(255, 115, 0);
+    border-radius: 7px;
+    outline: none;
+}
+.send-email input[submit] {
+    background: rgb(255, 115, 0);
+}

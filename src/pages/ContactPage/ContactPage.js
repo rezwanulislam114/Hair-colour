@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import './ContactPage.css';
 import ceo from '../../images/contact-us/IMG-20220118-WA0026.jpg'
 import director from '../../images/contact-us/IMG_2857 - Copy-01 (1).jpg'
+import emailjs from '@emailjs/browser'
 
 const ContactPage = () => {
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('gmail', 'send_message', form.current, 'user_PIE7VqvDn7nMogYwfLTdR')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        e.target.reset()
+    };
+
     return (
         <div>
             <div className="contact-header">
@@ -15,10 +31,10 @@ const ContactPage = () => {
             <Container>
                 <Row className='py-5'>
                     <div className="col-12 col-md-4 d-flex my-3">
-                        <i class="far fa-envelope fs-1 text-danger me-4"></i> <h2 className="sub-title"><span className="fs-5">Have any question?</span> <br />emial112@gmail.com </h2>
+                        <i class="far fa-envelope fs-1 text-danger me-4"></i> <h2 className="sub-title"><span className="fs-5">Have any question?</span> <br />haircolourbd@gmail.com </h2>
                     </div>
                     <div className="col-12 col-md-4 d-flex my-3">
-                        <i class="fab fa-whatsapp fs-1 text-success me-4"></i> <h2 className="sub-title"><span className="fs-5">WhatsApp</span> <br />+8801785998429</h2>
+                        <i class="fab fa-whatsapp fs-1 text-success me-4"></i> <h2 className="sub-title"><span className="fs-5">WhatsApp</span> <br />+8801774034756 <br /> +8801750400876</h2>
                     </div>
                     <div className="col-12 col-md-4 d-flex my-3">
                         <i class="fas fa-map-marker-alt fs-1 text-warning me-4"></i> <h2 className="sub-title fs-5"><span className="fs-5">Want to visit?</span> <br />
@@ -28,21 +44,27 @@ const ContactPage = () => {
                     </div>
                 </Row>
                 <Row>
-                    <div className="col-12 col-md-5 text-end">
+                    <div className="col-12 col-md-5 text-end pe-5">
                         <h2 className="sub-title fs-2">Write A Message</h2>
                         <p className="text-danger">Office Hours : Saturday to Thursday from (9:00A.M to 6:00 P.M)</p>
                         <p>If you got any question, please do not hesitate to send us a message.</p>
-                        <p>Address: <br /> 49/K, Promi Society, Maynertak <br /> Uttarkhan, Dhaka-1230, Bangladesh <br />
-                            WhatsApp : +8801715460528 <br />
-                            E-mail : sales@haircoatbd.com <br />
-                            Website : www.haircoatbd.com </p>
+                        <p><span className="fw-bold">Address:</span> <br /> 46/A, Promy Socity, Moynartek <br /> Uttarkhan, Dhaka-1230, Bangladesh <br />
+                            <span className="fw-bold">WhatsApp:</span> : +8801774035756 <br /> +8801750400876 <br />
+                            <span className="fw-bold">Email:</span> : <a href="mailto:haircolourbd@gmail.com">haircolourbd@gmail.com</a> <br />
+                            <span className="fw-bold">Website:</span> : <a href="https://hair-colour.netlify.app">https://hair-colour.netlify.app</a> </p>
                     </div>
-                    <div className="col-12 col-md-7">
-                        <h1 className='text-center'>Email</h1>
+                    <div className="col-12 col-md-7 mt-3">
+                        <form className='send-email' ref={form} onSubmit={sendEmail}>
+                            <input placeholder='Name' type="text" name="name" /> <br />
+                            <input placeholder='Email' type="email" name="email" /> <br />
+                            <input placeholder='Subject' type="text" name="subject" /> <br />
+                            <textarea placeholder='Type Your Message Here' name="message" /> <br />
+                            <input className='btn-regular' type="submit" value="Send" />
+                        </form>
                     </div>
                 </Row>
-                <Row className='mt-5'>
-                    <div className="col-12 col-md-5 text-end pe-5">
+                <Row className='mt-5 pt-5'>
+                    <div className="col-12 col-md-5 text-end pe-5 mb-4">
                         <h2 className="sub-title fs-2">Message From the CEO</h2>
                         <h5 className='m-0'>- Mr. Al-amin Islam</h5>
                         <img className='person-img' src={ceo} alt="" />
@@ -62,7 +84,7 @@ const ContactPage = () => {
                     </div>
                 </Row>
                 <Row className='my-5'>
-                    <div className="col-12 col-md-5 text-end pe-5">
+                    <div className="col-12 col-md-5 text-end pe-5 mb-4">
                         <h2 className="sub-title fs-2">Message From the Director</h2>
                         <h5 className='m-0'>- Md. Rasel Islam Khan</h5>
                         <img className='person-img' src={director} alt="" />
